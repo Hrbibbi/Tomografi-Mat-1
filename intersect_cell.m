@@ -2,9 +2,9 @@ function intersect_cell=intersect_cell(i,j,a,N,rho,theta)
     [x0,y0,x1,y1]=deal(-a+(2*a/N)*(i-1),-a+(2*a/N)*(j-1),-a+(2*a/N)*(i),-a+(2*a/N)*(j));
     if sin(theta)~=0 
         Ly=@(x) (rho-x*cos(theta))/sin(theta);
-        L=[x0,Ly(x0);x1,Ly(x1)]
+        L=[x0,Ly(x0);x1,Ly(x1)];
     else
-        L=[rho/cos(theta),y0;rho/cos(theta),y1]
+        L=[rho/cos(theta),y0;rho/cos(theta),y1];
         
     end
     D1=[x0,y0;y1,y1];

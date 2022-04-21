@@ -1,0 +1,3 @@
+function intersection= intersect_points(equation1,equation2)
+    
+end
