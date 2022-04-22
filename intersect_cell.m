@@ -24,7 +24,7 @@ if theta <= pi/2
     if rho0 < rho && rho < rho1
         bool_intersect = 1;
     end
-    if (phi == 0 || phi == pi/2) && rho == rho1:
+    if (theta == 0 || theta == pi/2) && rho == rho1
         bool_intersect = 1;
     end
     
@@ -39,7 +39,7 @@ if theta > pi/2
     if rho0 < rho && rho < rho1
         bool_intersect = 1;
     end
-    if phi == pi && rho == rho0:
+    if theta == pi && rho == rho0
         bool_intersect = 1;
     end
 end
