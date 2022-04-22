@@ -15,10 +15,12 @@ bool_intersect = 0;
 
 [x0,y0,x1,y1] = deal(-a+(2*a/N)*(i-1), -a+(2*a/N)*(j-1), -a+(2*a/N)*(i), -a+(2*a/N)*(j)); % computes the corners of the cell
 
+% The first case is when theta is in [0,pi/2]
 if theta <= pi/2
     rho0 = cos(theta)*x0 + sin(theta)*y0;
     rho1 = cos(theta)*x1 + sin(theta)*y1;
 
+    % The corresponding conditions
     if rho0 < rho && rho < rho1
         bool_intersect = 1;
     end
@@ -28,10 +30,12 @@ if theta <= pi/2
     
 end
 
+% The second case is when theta is in (pi/2,pi]
 if theta > pi/2
     rho0 = cos(theta)*x1 + sin(theta)*y0;
     rho1 = cos(theta)*x0 + sin(theta)*y1;
     
+    % The corresponding conditions
     if rho0 < rho && rho < rho1
         bool_intersect = 1;
     end
